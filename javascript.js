@@ -1,16 +1,47 @@
 function computerPlayGenerator() {
-   return Math.floor(Math.random() * 3 + 0)
+   return Math.floor(Math.random() * 3)
 }
 
-function computerPlay() {
+function computerSelection() {
    let num = computerPlayGenerator()
    if (num == 0) {
-      return "Rock"
+      return "rock"
    } else if (num == 1){
-      return "Paper"
+      return "paper"
    } else {
-      return ("Scissors")
+      return ("scissors")
    }
 }
 
-console.log(computerPlay())
+function playerPlay() {
+   let play = prompt("Rock, paper or scissors?")
+   return play
+}
+
+
+function playerSelection() {
+   let playerPlayCase = playerPlay()
+   if (playerPlayCase.toLowerCase() == "rock") {
+      return "rock"
+   } else if (playerPlayCase.toLowerCase() == "paper") {
+      return "paper"
+   } else if (playerPlayCase.toLowerCase() == "scissors") {
+      return "scissors"
+   } else {
+      return alert("Choose either rock, paper or scissors")
+   }
+}
+
+computerSelection()
+playerSelection()
+
+
+function playRound (playerSelection, computerSelection) {
+   if (playerSelection === computerSelection) {
+      return "It's a draw!"
+   } else {
+      return "I didn't program this yet"
+   }
+}
+
+alert(playRound())
