@@ -80,4 +80,3 @@ function game() {
 }
 
 game()
-console.log(playerScore, computerScore)
